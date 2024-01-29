@@ -1,2 +1,5 @@
 .env
 storage/*.json
+models/*
+data_pg/*
+data/*

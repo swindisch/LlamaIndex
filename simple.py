@@ -9,7 +9,7 @@ logging.getLogger().addHandler(logging.StreamHandler(stream=sys.stdout))
 
 # Erstelle den Index aus den Dokumenten.
 documents = SimpleDirectoryReader("data").load_data()
-index = VectorStoreIndex.from_documents(documents)
+index = VectorStoreIndex.from_documents(documents, show_progress=True)
 
 # Der Index wurde geladen, nun kann er verwendet werden.
 query_engine = index.as_query_engine()
